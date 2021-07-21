@@ -1,12 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
-name: step1
+name: step0
 
 # Controls when the workflow will run
 on:
-  workflow_run:
-    workflows: ["step0"]
-    types: [completed]
+  workflow_dispatch:
+#    inputs:
+#      environment:
+#        description: The kubernetes cluster suffix.
+#        required: true
+#        default: us
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
