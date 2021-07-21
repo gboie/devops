@@ -23,4 +23,4 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: step0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
