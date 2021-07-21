@@ -24,6 +24,7 @@ jobs:
         with:
           workflow: step0
           token: ${{ secrets.PAT }}
+          inputs: '{ "environment": "testenv" }'
       
       - name: Invoke workflow 1 without inputs
         uses: benc-uk/workflow-dispatch@v1
