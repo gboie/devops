@@ -19,6 +19,7 @@ jobs:
           inputs: '{ "environment": "testenv" }'
   build-step1:
     runs-on: ubuntu-latest
+    needs: build-step0
     steps:   
       - name: Invoke workflow 1 without inputs
         uses: benc-uk/workflow-dispatch@v1
