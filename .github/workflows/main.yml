@@ -8,24 +8,16 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  build-step0:
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
       - name: Invoke workflow 0 without inputs
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: step0
           token: ${{ secrets.PAT }}
           inputs: '{ "environment": "testenv" }'
-      
+  build-step1:
+    steps:   
       - name: Invoke workflow 1 without inputs
         uses: benc-uk/workflow-dispatch@v1
         with:
